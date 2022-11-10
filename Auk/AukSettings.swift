@@ -69,6 +69,5 @@ public struct PageControlSettings {
   /// When true the page control is visible on screen.
   public var visible = true
     
-  @available(iOS 14.0, *)
   public var preferredIndicatorImage: UIImage? = nil
 }
