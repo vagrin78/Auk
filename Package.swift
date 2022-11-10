@@ -3,6 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "Auk",
+    platforms: [.iOS(.v14)], // Our minimum deployment target is 14
     products: [
         .library(name: "Auk", targets: ["Auk"]),
     ],
