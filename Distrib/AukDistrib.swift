@@ -808,6 +808,7 @@ public struct PageControlSettings {
   /// When true the page control is visible on screen.
   public var visible = true
     
+  @available(iOS 14.0, *)
   public var preferredIndicatorImage: UIImage? = nil
 }
 
@@ -883,7 +884,9 @@ final class AukPageIndicatorContainer: UIView {
   
   private func createPageControl(_ settings: AukSettings) -> UIPageControl {
     let pageControl = UIPageControl()
-    pageControl.preferredIndicatorImage = settings.pageControl.preferredIndicatorImage
+    if #available(iOS 14.0, *) {
+        pageControl.preferredIndicatorImage = settings.pageControl.preferredIndicatorImage
+    }
     
     if #available(*, iOS 9.0) {
       // iOS 9+
