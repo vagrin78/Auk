@@ -63,6 +63,7 @@ final class AukPageIndicatorContainer: UIView {
   
   private func createPageControl(_ settings: AukSettings) -> UIPageControl {
     let pageControl = UIPageControl()
+    pageControl.preferredIndicatorImage = settings.pageControl.preferredIndicatorImage
     
     if #available(*, iOS 9.0) {
       // iOS 9+
